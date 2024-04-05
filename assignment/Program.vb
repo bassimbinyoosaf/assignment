@@ -16,6 +16,7 @@ Public Class StudentManager
             Console.WriteLine("New student entry created.")
         End If
 
+        'Inputting Student details
         Console.Write("Enter student name: ")
         student.Name = Console.ReadLine()
 
@@ -25,6 +26,7 @@ Public Class StudentManager
         Console.WriteLine("Student record updated.")
     End Sub
 
+    'Deleting Student details
     Public Sub DeleteStudent(ByVal id As Integer)
         Dim student = students.FirstOrDefault(Function(s) s.Id = id)
         If student IsNot Nothing Then
@@ -42,6 +44,8 @@ Public Class StudentManager
     End Sub
 End Class
 
+
+'Giving choices whether the user wants to insert update Or delete the student details
 Module Module1
     Sub Main()
         Dim manager As New StudentManager()
